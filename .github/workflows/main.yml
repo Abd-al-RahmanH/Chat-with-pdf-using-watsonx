@@ -16,4 +16,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://RAHMAN00700:$HF_TOKEN@huggingface.co/spaces/RAHMAN00700/chat_with_pdf1 main
+        run: git push --force https://RAHMAN00700:$HF_TOKEN@huggingface.co/spaces/RAHMAN00700/chat_with_pdf_using_watsonx main
