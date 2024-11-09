@@ -37,7 +37,9 @@ model = None
 index = None
 chain = None
 rag_chain = None
-watsonx_project_id = os.getenv("WATSONX_PROJECT_ID")
+watsonx_project_id = os.getenv("WATSONX_PROJECT_ID", None)
+watsonx_api_key =   os.getenv("IBM_CLOUD_API_KEY", None)
+ 
 
 prompt_template_br = PromptTemplate(
     input_variables=["context", "question"], 
