@@ -37,8 +37,8 @@ model = None
 index = None
 chain = None
 rag_chain = None
-watsonx_project_id = os.getenv("WATSONX_PROJECT_ID", None)
-watsonx_api_key =   os.getenv("IBM_CLOUD_API_KEY", None)
+watsonx_project_id = "5bd59c57-bfa7-4565-b392-a98a90224509"#os.getenv("WATSONX_PROJECT_ID", None)
+ 
  
 
 prompt_template_br = PromptTemplate(
@@ -54,7 +54,7 @@ I am a helpful assistant.
 
 with st.sidebar: 
     st.title("Watsonx RAG Demo")        
-    watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value=os.getenv("IBM_CLOUD_API_KEY"), type="password")
+    watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value="CycH3S8_zauKHDxJvjtenKAkOnz6skxApg9VMECFyvX8",""""os.getenv("IBM_CLOUD_API_KEY"),"""" type="password")
     if not watsonx_project_id:
         watsonx_project_id = st.text_input("Watsonx Project ID", key="watsonx_project_id")
     watsonx_model = st.selectbox("Model", ["ibm/granite-20b-multilingual", "meta-llama/llama-3-405b-instruct"]) 
