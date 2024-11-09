@@ -10,7 +10,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 import streamlit as st
 
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 from ibm_watson_machine_learning.foundation_models import Model
 from ibm_watson_machine_learning.foundation_models.utils.enums import ModelTypes
@@ -54,7 +54,8 @@ I am a helpful assistant.
 
 with st.sidebar: 
     st.title("Watsonx RAG Demo")        
-    watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value="CycH3S8_zauKHDxJvjtenKAkOnz6skxApg9VMECFyvX8",""""os.getenv("IBM_CLOUD_API_KEY"),"""" type="password")
+    #watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value="CycH3S8_zauKHDxJvjtenKAkOnz6skxApg9VMECFyvX8",""""os.getenv("IBM_CLOUD_API_KEY"),"""" type="password")
+    watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value="CycH3S8_zauKHDxJvjtenKAkOnz6skxApg9VMECFyvX8", type="password")
     if not watsonx_project_id:
         watsonx_project_id = st.text_input("Watsonx Project ID", key="watsonx_project_id")
     watsonx_model = st.selectbox("Model", ["ibm/granite-20b-multilingual", "meta-llama/llama-3-405b-instruct"]) 
