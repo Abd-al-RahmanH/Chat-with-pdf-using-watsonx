@@ -58,7 +58,7 @@ with st.sidebar:
     watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value="CycH3S8_zauKHDxJvjtenKAkOnz6skxApg9VMECFyvX8", type="password")
     if not watsonx_project_id:
         watsonx_project_id = st.text_input("Watsonx Project ID", key="watsonx_project_id")
-    watsonx_model = st.selectbox("Model", ["ibm/granite-20b-multilingual", "meta-llama/llama-3-405b-instruct"]) 
+    watsonx_model = st.selectbox("Model", ["ibm/granite-20b-multilingual", "meta-llama/llama-3-405b-instruct", "codellama/codellama-34b-instruct-hf"]) 
     max_new_tokens = st.slider("Max output tokens", min_value=100, max_value=900, value=300, step=100)
     decoding_method = st.sidebar.radio("Decoding", (DecodingMethods.GREEDY.value, DecodingMethods.SAMPLE.value))
     parameters = {
